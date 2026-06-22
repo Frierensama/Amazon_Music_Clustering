@@ -59,40 +59,19 @@ Using features such as danceability, energy, loudness, speechiness, acousticness
 
 | Cluster | Description                            |
 | ------- | -------------------------------------- |
-| 0       | Spoken Content & Short Vocal Tracks    |
-| 1       | High-Energy Dance & Pop Tracks         |
-| 2       | Acoustic & Instrumental Relaxed Tracks |
-| 3       | Long-Form Audio & Ambient Content      |
+| 0       | Speed & Short Type                     |
+| 1       | High-Energy & Danceble Type            |
+| 2       | Acoustic & Instrumental Type           |
+| 3       | Long Duration Type                     |
 
 ---
 
-## Business Applications
-
-### 🎧 Personalized Playlist Curation
-
-Group similar songs together to create better playlists.
-
-### 🔍 Song Recommendation
-
-Recommend songs from the same audio cluster.
-
-### 🎤 Artist Analysis
-
-Identify songs competing within the same musical segment.
-
-### 📈 Market Segmentation
-
-Analyze listener preferences using cluster-based song groups.
-
----
 
 ## Dashboard Features
 
-* Dataset Overview
-* Cluster Distribution
+* Overview
 * Cluster Analysis
 * Song Explorer
-* Business Insights
 * Project Report
 
 ---
