@@ -24,6 +24,7 @@ page = st.sidebar.radio(
     [
         "Overview",
         "Cluster Analysis",
+        "Song Explorer",
         "Project Report"
     ]
 )
@@ -111,42 +112,49 @@ elif page == "Cluster Analysis":
         0: """
         Speed & Short Type
 
-        - Very high speechiness
-        - Short duration
-        - High liveness
-        - Podcast-like content
+        - speechness, liveness, dancebility +ve
+        - duration, loudness -ve
         """,
 
         1: """
         High-Energy & Danceble Type
 
-        - High energy
-        - Loud songs
-        - Fast tempo
-        - Positive mood
+        - energy, loudness, valence +ve
+        - acousticness -ve
         """,
 
         2: """
         Acoustic & Instrumental Type
 
-        - High acousticness
-        - High instrumentalness
-        - Lower energy
-        - Relaxed listening
+        - instrumental, acousticness +ve
+        - energy , dancebility, valence -ve
         """,
 
         3: """
         Long Duration Type
 
-        - Extremely long duration
-        - Ambient recordings
-        - Live sessions
-        - Extended audio content
+        - duration, livemness, speechieness +ve
+        - loudness, tempo -ve
         """
     }
 
     st.success(cluster_descriptions[cluster_choice])
 
+
+elif page == "Song Explorer":
+
+    st.title("Song Explorer")
+
+    cluster_filter = st.selectbox("Select Cluster",sorted(df["Cluster"].unique()))
+    filtered = df[df["Cluster"] == cluster_filter]
+
+    st.write(
+        f"Songs in Cluster {cluster_filter}: "
+        f"{len(filtered):,}"
+    )
+
+    display_cols = ["name_song","name_artists","Cluster"]
+    st.dataframe(filtered[display_cols],use_container_width=True,height=600)
 
 elif page == "Project Report":
 
