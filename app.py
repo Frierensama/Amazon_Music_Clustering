@@ -13,7 +13,7 @@ st.set_page_config(page_title="Amazon Music Clustering",page_icon="🎵",layout=
 
 @st.cache_data
 def load_data():
-    return pd.read_csv(os.getenv('clustered_csv_path'))
+    return pd.read_csv("clustered_dataset.csv")
 
 df = load_data()
 
