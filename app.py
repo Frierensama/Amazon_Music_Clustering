@@ -4,11 +4,6 @@ import plotly.express as px
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
-
 st.set_page_config(page_title="Amazon Music Clustering",page_icon="🎵",layout="wide")
 
 @st.cache_data
